@@ -12,3 +12,12 @@ Practice: class-components, fn-components, styles, routing, forms, HOC
 
 ---
 
+## Installation & Run
+
+```
+$ git clone https://github.com/PavelKrokhmal/react-quiz
+$ cd ./react-quiz
+$ npm install
+$ npm run start
+```
+
