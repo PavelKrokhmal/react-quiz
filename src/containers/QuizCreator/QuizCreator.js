@@ -5,6 +5,7 @@ import { createControl, validate, validateForm } from '../../form/formFramework'
 import Input from '../../components/UI/Input/Input'
 import Auxiliary from '../../hoc/Auxiliary/Auxiliary'
 import Select from '../../components/UI/Select/Select'
+import axiosQuiz from '../../axios/axios-quiz'
 
 function createOptionControls(number) {
   return createControl({label: `Вариант ${number}`, errorMessage: 'Значение не может быть пустым!', id: number}, {required: true})
@@ -60,8 +61,16 @@ class QuizCreator extends Component {
 
   }
 
-  createQuizHandler = () => {
-    console.log(this.state)
+  createQuizHandler = async (event) => {
+    try {
+      await axiosQuiz.post('/quizes.json', this.state.quiz)
+      this.setState({quiz: [], 
+        rightAnswerId: 1,
+        isFormValid: false,
+        formControls: createFormControls()})
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   onChangeHandler = (value, controlName) => {

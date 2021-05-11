@@ -6,9 +6,9 @@ Self-study course of React by Vladilen Minin.
 
 The target is to create quiz-app using React library.
 
-Used technologies: HTML, SCSS, JavaScript, React, Webpack 5, Redux
+Used technologies: HTML, SCSS, JavaScript, React, Webpack 5, Redux, firebase, axios
 
-Practice: class-components, fn-components, styles, routing, forms, HOC
+Practice: class-components, fn-components, styles, routing, forms, HOC, server
 
 ---
 
